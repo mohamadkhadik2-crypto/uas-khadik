@@ -1,0 +1,36 @@
+services:
+  db-webdinamis-php:
+    image: mariadb:lts
+    environment:
+      MARIADB_ROOT_PASSWORD: password!123
+      MARIADB_DATABASE: showroom_lamborghini
+      MARIADB_USER: lamborghini_deu
+      MARIADB_PASSWORD: password_lamborghini_deu
+    volumes:
+      - db_data_php:/var/lib/mysql
+      # Menggunakan file SQL khusus PHP Native yang baru dibuat
+      - ./db_data/db_lamborghini.sql:/docker-entrypoint-initdb.d/db_lamborghini.sql:ro
+    restart: always
+
+  container-statis-fariz:
+    image: farizinformatika123/uas-fariz:statis # Ditarik dari Docker Hub oleh server EC2
+    ports:
+      - "80:80"
+    restart: always
+
+  container-dinamis-php:
+    image: farizinformatika123/uas-fariz:latest # Ditarik dari Docker Hub oleh server EC2
+    ports:
+      # Kita gunakan port 8080 di host agar tidak bentrok dengan web statis (80)
+      - "8080:80"
+    restart: always
+    environment:
+      DB_USER: lamborghini_deu
+      DB_PASSWORD: password_lamborghini_deu
+      DB_NAME: showroom_lamborghini
+      DB_HOST: db-webdinamis-php
+    depends_on:
+      - db-webdinamis-php
+
+volumes:
+  db_data_php: {}
