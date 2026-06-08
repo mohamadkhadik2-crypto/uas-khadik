@@ -81,6 +81,7 @@ Berikut adalah bukti bahwa alur CI/CD dan Deployment telah berjalan dengan sukse
 
 ### 1. Bukti GitHub Actions Sukses (Passed)
 ![alt text](actionstatis.png)
+![alt text](actiondinamis.png)
 *(Keterangan: Screenshot dari tab Actions di GitHub yang menunjukkan ceklis hijau pada proses build dan deploy)*
 
 ### 2. Bukti Web Dinamis Berjalan di AWS
