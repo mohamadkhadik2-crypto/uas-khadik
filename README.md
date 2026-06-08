@@ -80,7 +80,7 @@ Silakan kunjungi tautan berikut untuk melihat aplikasi yang sudah berjalan di at
 Berikut adalah bukti bahwa alur CI/CD dan Deployment telah berjalan dengan sukses:
 
 ### 1. Bukti GitHub Actions Sukses (Passed)
-
+![alt text](actionstatis.png)
 *(Keterangan: Screenshot dari tab Actions di GitHub yang menunjukkan ceklis hijau pada proses build dan deploy)*
 
 ### 2. Bukti Web Dinamis Berjalan di AWS
@@ -88,5 +88,5 @@ Berikut adalah bukti bahwa alur CI/CD dan Deployment telah berjalan dengan sukse
 *(Keterangan: Screenshot halaman Showroom Lamborghini dan fitur CRUD yang terbuka di browser dengan URL IP AWS)*
 
 ### 3. Bukti Web Statis Berjalan di AWS
-
+![alt text](webstatis.png)
 *(Keterangan: Screenshot halaman Portofolio yang terbuka di browser dengan URL IP AWS)*
