@@ -2,6 +2,17 @@
 
 Repositori ini berisi implementasi *Cloud Native Deployment* yang diotomatisasi penuh menggunakan sistem **Continuous Integration & Continuous Deployment (CI/CD)**. Proyek ini mendemonstrasikan penggelaran dua aplikasi web (Statis & Dinamis) ke dalam *cloud server* (AWS EC2) menggunakan *containerization* (Docker).
 
+## pembuatan dari awal
+1.aws ec2
+![alt text](aws.png)
+2.repo docker
+![alt text](repodocker.png)
+3.docker engine
+![alt text](docker.png)
+4.port security
+![alt text](port.png)
+
+
 ## Topologi Arsitektur (Architecture Topology)
 
 Sistem ini didesain menggunakan pendekatan *microservices-lite* di mana setiap komponen terisolasi dalam kontainernya masing-masing, namun saling terhubung dalam satu jaringan *bridge* Docker.
@@ -69,7 +80,7 @@ Silakan kunjungi tautan berikut untuk melihat aplikasi yang sudah berjalan di at
 Berikut adalah bukti bahwa alur CI/CD dan Deployment telah berjalan dengan sukses:
 
 ### 1. Bukti GitHub Actions Sukses (Passed)
-![Bukti GitHub Actions](imagegithubaction.png)
+
 *(Keterangan: Screenshot dari tab Actions di GitHub yang menunjukkan ceklis hijau pada proses build dan deploy)*
 
 ### 2. Bukti Web Dinamis Berjalan di AWS
@@ -77,5 +88,5 @@ Berikut adalah bukti bahwa alur CI/CD dan Deployment telah berjalan dengan sukse
 *(Keterangan: Screenshot halaman Showroom Lamborghini dan fitur CRUD yang terbuka di browser dengan URL IP AWS)*
 
 ### 3. Bukti Web Statis Berjalan di AWS
-![Bukti Web Statis](imagestatis.png)
+
 *(Keterangan: Screenshot halaman Portofolio yang terbuka di browser dengan URL IP AWS)*

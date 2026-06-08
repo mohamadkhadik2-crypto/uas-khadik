@@ -22,7 +22,7 @@ jobs:
       with:
         context: ./web-dinamis-php
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/uas-fariz:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/uas-khadik:latest
 
   deploy-to-ec2:
     runs-on: ubuntu-latest
